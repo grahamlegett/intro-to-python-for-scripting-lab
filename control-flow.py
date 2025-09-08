@@ -82,3 +82,42 @@ def check_voting_eligibility():
 
 # Call the function
 check_voting_eligibility()
+
+# Problem 3: Calculate dog years
+#
+# Write a Python function named `calculate_dog_years` that calculates a dog's
+# age in dog years.
+# Fill in the logic to perform the calculation inside the function.
+#
+# Function Details:
+# - Prompt the user to enter a dog's age: "Input a dog's age: "
+# - Calculate the dog's age in dog years:
+#      - The first two years of the dog's life count as 10 dog years each.
+#      - Each subsequent year counts as 7 dog years.
+# - Print the calculated age: "The dog's age in dog years is xx."
+# - Replace 'xx' with the calculated dog years.
+#
+# Hints:
+# - Use the `input()` function to capture user input.
+# - Convert the string input to an integer using `int()`.
+# - Apply conditional logic to perform the correct age calculation based on the
+#   dog's age.
+
+def calculate_dog_years():
+    # Your control flow logic goes here
+    dog_age = input("Enter dog's age: ")
+    try:
+        dog_entered = int(dog_age)
+    except ValueError as e:
+        print(f"Error: {e}");   
+    if dog_entered > 0 and dog_entered > 2:
+        year_dog = ((10 * 2) + ((dog_entered - 2) * 7))
+        print("The dog's age in dog years is: ")
+        print(year_dog)
+    elif dog_entered < 2 and dog_entered > 0:
+        print("The dog is 10 years old in dog years")
+    else:
+        print("Sorry to say you don't have a dog")
+
+# Call the function
+calculate_dog_years()
